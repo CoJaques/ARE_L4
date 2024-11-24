@@ -96,6 +96,7 @@ int main(void)
 		read_keys(keys_state);
 
 		if (keys_state[KEY_0] && !keys_state_old[KEY_0]) {
+			printf("key 0 pressed\n");
 			start_timer();
 			Leds_set(1 << 8);
 		}

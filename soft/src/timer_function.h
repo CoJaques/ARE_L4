@@ -58,4 +58,9 @@ void start_timer(void);
  */
 void stop_timer(void);
 
+/*
+ * Function used to run the isr.
+ */
+void timer_interrupt_handler(void);
+
 #endif

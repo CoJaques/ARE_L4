@@ -50,19 +50,17 @@
 #define PIO_DIR_OFFSET	      0x4
 
 // Define PIO bits usage
-#define SWITCHS_BITS	      0x00003FF0
-#define SWITCHS_70_MASK	      0x000000FF
-#define LEDS_BITS	      0x03FF0000
-#define LEDS_70_MASK	      0x000000FF
+#define SWITCHS_BITS	      0x000003FF
+#define LEDS_BITS	      	0x000FFC00
 #define SEGMENTS_BITS	      0x0FFFFFFF
 #define SEGMENT_MASK	      0x7F
 
-#define INIT_7SEG	      0x0EF03FFF
-#define INIT_KEYS	      0xF
-#define INIT_LEDS	      0x155
+#define INIT_KEYS	      0x00F00000
+#define INIT_LEDS	      0x000
 
-#define SWITCHS_OFFSET	      0x4
-#define LEDS_OFFSET	      0x10
+#define SWITCHS_OFFSET	      0x0
+#define LEDS_OFFSET	      10
+#define KEYS_OFFSET			20
 
 #define SEGMENT_LENGTH	      0x7
 #define MAX_7SEG_VALUE	      16

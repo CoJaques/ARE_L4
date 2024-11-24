@@ -46,7 +46,7 @@ void stop_timer(void)
 /*
  * Timer interrupt handler (should be called by the IRQ handler)
  */
-static void timer_interrupt_handler(void)
+void timer_interrupt_handler(void)
 {
 	// Execute the callback function if it's set
 	if (timer_callback_function) {

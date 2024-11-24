@@ -52,7 +52,7 @@ void Segs7_init(void)
 	PIO1_DIR |= SEGMENTS_BITS;
 
 	// clear 7-segments and write base data
-	PIO1_DATA = INIT_7SEG;
+	Seg7_write_time(0);
 }
 
 uint32_t Switchs_read(void)
@@ -84,7 +84,7 @@ void Leds_toggle(uint32_t maskleds)
 
 bool Key_read(int key_number)
 {
-	return !(PIO0_DATA & (1 << key_number));
+	return !(PIO0_DATA & (1 << (key_number + KEYS_OFFSET)));
 }
 
 void Seg7_write(int seg7_number, uint32_t value)

@@ -27,6 +27,7 @@
  *****************************************************************************************/
 
 #include "exceptions.h"
+#include "timer_function.h"
 
 // Define the IRQ exception handler
 void __attribute__((interrupt)) __cs3_isr_irq(void)
@@ -36,7 +37,7 @@ void __attribute__((interrupt)) __cs3_isr_irq(void)
 
 	// Handle the interrupt if it comes from the timer
 	if (interrupt_ID == TIMER_IRQ_ID) {
-		hps_timer_ISR();
+		timer_interrupt_handler();
 	}
 
 	// Clear interrupt from the CPU Interface
