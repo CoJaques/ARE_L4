@@ -51,7 +51,7 @@
 
 // Define PIO bits usage
 #define SWITCHS_BITS	      0x000003FF
-#define LEDS_BITS	      	0x000FFC00
+#define LEDS_BITS	      0x000FFC00
 #define SEGMENTS_BITS	      0x0FFFFFFF
 #define SEGMENT_MASK	      0x7F
 
@@ -60,7 +60,7 @@
 
 #define SWITCHS_OFFSET	      0x0
 #define LEDS_OFFSET	      10
-#define KEYS_OFFSET			20
+#define KEYS_OFFSET	      20
 
 #define SEGMENT_LENGTH	      0x7
 #define MAX_7SEG_VALUE	      16
