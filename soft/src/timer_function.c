@@ -46,13 +46,13 @@ void stop_timer(void)
 /*
  * Timer interrupt handler (should be called by the IRQ handler)
  */
-void timer_interrupt_handler(void)
+static void timer_interrupt_handler(void)
 {
-	// Clear the timer interrupt
-	TIMER_REG(TIMER_INTCLR_OFFSET);
-
 	// Execute the callback function if it's set
 	if (timer_callback_function) {
 		timer_callback_function();
 	}
+
+	// Clear the timer interrupt
+	TIMER_REG(TIMER_INTCLR_OFFSET);
 }
