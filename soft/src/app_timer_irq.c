@@ -25,14 +25,15 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include "timer_function.h"
+#include "pio_function.h"
 #include "axi_lw.h"
 
 int __auto_semihosting;
 
-int main(void){
+int main(void)
+{
+	printf("Laboratoire: Timer IRQ \n");
 
-    printf("Laboratoire: Timer IRQ \n");
-    
-    // TO BE COMPLETE
-
+	// TO BE COMPLETE
 }
